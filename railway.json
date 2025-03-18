@@ -1,8 +1,8 @@
 {
-    "build": {
-        "dockerfile": "Dockerfile"
-    },
-    "deploy": {
-        "restartPolicyType": "ON_FAILURE"
-    }
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "deploy": {
+    "startCommand": "minio server /data --console-address :9001"
+  }
 }
