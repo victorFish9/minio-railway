@@ -5,9 +5,9 @@ services:
     plan: free
     envVars:
       - key: MINIO_ROOT_USER
-        value: your-access-key
+        value: admin
       - key: MINIO_ROOT_PASSWORD
-        value: your-secret-key
+        value: admin
     disk:
       name: minio-data
       mountPath: /data
