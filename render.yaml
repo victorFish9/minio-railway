@@ -1,0 +1,15 @@
+services:
+  - name: minio
+    type: web
+    env: docker
+    plan: free
+    envVars:
+      - key: MINIO_ROOT_USER
+        value: your-access-key
+      - key: MINIO_ROOT_PASSWORD
+        value: your-secret-key
+    disk:
+      name: minio-data
+      mountPath: /data
+      sizeGB: 1
+    healthCheckPath: /
